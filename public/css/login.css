@@ -1,0 +1,66 @@
+html{
+    background-color: #e5e5f7;
+opacity: 0.7;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 19px ), repeating-linear-gradient( #5c45f755, #5c45f7 );
+}
+    
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    font-size: larger;
+  }
+  
+  .form-container{
+      width: 500px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 50px;
+  }
+  
+  form{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  form+p form p {
+      text-align: center;
+  }
+
+  input, button{
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 15px 30px;
+    font-size: larger;
+  }
+
+  input:hover{
+    border: 2px solid #007bff; /* Cambia el grosor y el color del borde al pasar el cursor */   
+  }
+
+  button{
+    background-color: aqua;
+    color: white;
+    font-weight: bold ;
+    cursor: pointer;
+  }
+
+  .error{
+    color: rgb(248, 77, 77);
+  }
+  .escondido{
+    display: none;
+  }
+  
+  .sr-only{
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }

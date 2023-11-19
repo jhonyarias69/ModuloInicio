@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="resources/css/register.css">
+</head>
+<body>
+    <main>
+        <div class="form-container">
+             <h1>Crea tu cuenta</h1>
+             <p>Crea tu cuenta para empezar a gestionar tus radicados</p>
+             <form action="register" method="POST">
+                <label for="nombre" class="sr-only">nombre</label>
+                <input type="text" name="nombre" id="nombre"  placeholder="Nombre de usuario" required>
+                <label for="email" class="sr-only">email</label>
+                <input type="email" name="email" id="email"  placeholder="Correo" required>
+                <label for="telefono" class="sr-only">telefono</label>
+                <input type="text" name="telefono" id="telefono"  placeholder="Telefono" required>
+                <label for="contrasena" class="sr-only">Contraseña</label>
+                <input type="password" name="contrasena" id="contrasena"  placeholder="Contraseña" required>
+                <input type="submit" class="btn-Save" value="Registrate">
+                <p class="error escondido" class>Error al registrarse</p>
+             </form>
+             <p>¿Ya estas registrado? - <a href="/login">Iniciar sesión</a></p>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer:<%= timer %>
+            }).then(()=>{
+                window.location='/ <%= ruta %>'
+            })
+        </script>
+        <% } %>
+</body>    
+</html>

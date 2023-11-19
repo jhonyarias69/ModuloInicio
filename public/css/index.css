@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(179, 244, 81);
+}
+h1{
+    text-align: center;
+}
+.boton {
+    text-align: center;
+    display: contents;
+    color: red;
+    font-size: 25px;
+    
+}
